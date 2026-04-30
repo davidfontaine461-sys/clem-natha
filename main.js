@@ -25,11 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('open');
       navMenu.classList.toggle('open');
+      nav.classList.toggle('menu-open');
     });
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('open');
         navMenu.classList.remove('open');
+        nav.classList.remove('menu-open');
       });
     });
   }

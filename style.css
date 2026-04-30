@@ -179,7 +179,8 @@ section {
   mix-blend-mode: difference;
 }
 
-.nav.scrolled {
+.nav.scrolled,
+.nav.menu-open {
   mix-blend-mode: normal;
   background: rgba(245, 241, 234, 0.92);
   backdrop-filter: blur(20px);
