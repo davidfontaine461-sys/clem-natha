@@ -386,18 +386,18 @@ section {
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: var(--paper-deep);
+    background: linear-gradient(to right, var(--paper-deep) 50%, var(--paper-warm) 50%);
     align-items: center;
   }
 
-  /* Halo vermillon derrière l'image + lueur basse à gauche */
+  /* Halo vermillon uniquement derrière l'image (côté droit, fond clair) */
   .hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 65% 85% at 78% 48%, rgba(200,68,44,0.55) 0%, transparent 65%),
-      radial-gradient(ellipse 40% 60% at 6% 88%, rgba(200,68,44,0.20) 0%, transparent 55%);
+      radial-gradient(ellipse 65% 85% at 78% 48%, rgba(200,68,44,0.32) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 60% at 55% 88%, rgba(200,68,44,0.14) 0%, transparent 55%);
     pointer-events: none;
     z-index: 0;
   }
