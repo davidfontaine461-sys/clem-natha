@@ -358,42 +358,6 @@ section {
   object-fit: cover;
 }
 
-/* Desktop : deux colonnes verticales */
-@media (min-width: 1025px) {
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    overflow: hidden;
-  }
-
-  /* Colonne droite : image */
-  .hero-image {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-  }
-
-  .hero-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Colonne gauche : texte — garde le fond sombre et les couleurs existantes */
-  .hero-content {
-    height: 100%;
-  }
-
-  /* Indicateur de scroll masqué (centré sur toute la section, incohérent en 2 colonnes) */
-  .scroll-indicator {
-    display: none;
-  }
-}
-
 .hero-image {
   position: absolute;
   inset: 0;
@@ -411,6 +375,44 @@ section {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(15,14,12,0.3) 0%, rgba(15,14,12,0.5) 70%, rgba(15,14,12,0.85) 100%);
+}
+
+/* Desktop : deux colonnes verticales — doit être APRÈS les règles de base */
+@media (min-width: 1025px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Colonne droite : image sort du flux absolu pour intégrer le grid */
+  .hero-image {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .hero-image::after {
+    display: none;
+  }
+
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Colonne gauche : texte */
+  .hero-content {
+    height: 100%;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
 }
 
 .hero-content {
