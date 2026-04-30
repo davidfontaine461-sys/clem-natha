@@ -384,13 +384,15 @@ section {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Colonne droite : image sort du flux absolu pour intégrer le grid */
+  /* Colonne droite : image */
   .hero-image {
     position: relative;
     top: auto;
     right: auto;
     bottom: auto;
     left: auto;
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .hero-image::after {
@@ -408,6 +410,8 @@ section {
   /* Colonne gauche : texte */
   .hero-content {
     height: 100%;
+    grid-column: 1;
+    grid-row: 1;
   }
 
   .scroll-indicator {
