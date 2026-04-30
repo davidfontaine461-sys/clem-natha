@@ -160,6 +160,11 @@ section {
    NAVIGATION
    ======================================== */
 
+/* Offset ancres pour compenser la nav fixe */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
 .nav {
   position: fixed;
   top: 0;
