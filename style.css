@@ -387,7 +387,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background: var(--paper-deep);
-    align-items: center;
+    /* align-items: stretch par défaut — les deux colonnes = 100vh, pas de débordement */
   }
 
   /* Halo vermillon derrière l'image + lueur basse à gauche */
@@ -402,7 +402,7 @@ section {
     z-index: 0;
   }
 
-  /* Image : sortie du plein fond, repositionnée en colonne droite */
+  /* Image : colonne droite, fond transparent */
   .hero-image {
     position: relative;
     top: auto; right: auto; bottom: auto; left: auto;
@@ -412,6 +412,7 @@ section {
     align-items: center;
     justify-content: center;
     padding: 2rem 2.5rem 2rem 0.5rem;
+    background: none;
     z-index: 1;
   }
 
@@ -419,13 +420,12 @@ section {
     display: none;
   }
 
-  /* Image portrait, taille contenue, légèrement inclinée */
+  /* Image portrait : hauteur en % du conteneur pour ne jamais dépasser 100vh */
   .hero-img {
     position: relative;
     inset: auto;
     width: auto;
-    height: 96vh;
-    max-height: 900px;
+    height: 88%;
     max-width: 100%;
     aspect-ratio: 3/4;
     object-fit: cover;
