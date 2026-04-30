@@ -385,7 +385,7 @@ section {
 @media (min-width: 1025px) {
   .hero {
     display: grid;
-    grid-template-columns: 0.85fr 1fr;
+    grid-template-columns: 420px 1fr;
   }
 
   /* Colonne droite : image */
