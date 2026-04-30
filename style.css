@@ -813,6 +813,8 @@ section {
 
 .pro-image-stack .photo-placeholder {
   position: absolute;
+  cursor: pointer;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
 }
 
 .pro-image-stack .ph-1 {
@@ -823,6 +825,20 @@ section {
 .pro-image-stack .ph-2 {
   inset: 30% 0 0 30%;
   z-index: 1;
+}
+
+/* Photo de derrière cliquée : elle passe devant */
+.pro-image-stack.swapped .ph-1 {
+  z-index: 1;
+}
+
+.pro-image-stack.swapped .ph-2 {
+  z-index: 2;
+}
+
+.pro-image-stack .photo-placeholder:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(15,14,12,0.18);
 }
 
 /* ========================================
