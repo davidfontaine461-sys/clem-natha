@@ -827,18 +827,12 @@ section {
   z-index: 1;
 }
 
-/* Photo de derrière cliquée : elle passe devant */
-.pro-image-stack.swapped .ph-1 {
-  z-index: 1;
-}
-
-.pro-image-stack.swapped .ph-2 {
-  z-index: 2;
-}
-
-.pro-image-stack .photo-placeholder:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 40px rgba(15,14,12,0.18);
+/* Desktop : survol de la photo de derrière → elle passe devant */
+@media (hover: hover) {
+  .pro-image-stack .ph-2:hover {
+    z-index: 3;
+    box-shadow: 0 12px 40px rgba(15,14,12,0.22);
+  }
 }
 
 /* ========================================

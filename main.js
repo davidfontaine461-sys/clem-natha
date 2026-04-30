@@ -99,14 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Stack de photos pro — clic/touch pour mettre la photo de derrière devant
-  const proStacks = document.querySelectorAll('.pro-image-stack');
-  proStacks.forEach(stack => {
-    stack.querySelectorAll('.photo-placeholder').forEach(photo => {
-      photo.addEventListener('click', () => stack.classList.toggle('swapped'));
-    });
-  });
-
   // FAQ accordion
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
