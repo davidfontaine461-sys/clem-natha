@@ -411,7 +411,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 3.5rem 4rem 1rem;
+    padding: 2rem 2.5rem 2rem 0.5rem;
     z-index: 1;
   }
 
@@ -424,8 +424,8 @@ section {
     position: relative;
     inset: auto;
     width: auto;
-    height: 72vh;
-    max-height: 580px;
+    height: 85vh;
+    max-height: 720px;
     max-width: 100%;
     aspect-ratio: 3/4;
     object-fit: cover;
