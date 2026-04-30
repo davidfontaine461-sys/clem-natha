@@ -833,6 +833,20 @@ section {
   background: var(--paper);
 }
 
+/* Grille uniforme 3 colonnes pour la section Œuvres récentes (index) */
+.gallery .gallery-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery .gallery-item.size-md,
+.gallery .gallery-item.size-lg,
+.gallery .gallery-item.size-tall,
+.gallery .gallery-item.size-wide {
+  grid-column: span 1;
+  aspect-ratio: 3/4;
+}
+
 .gallery-filters {
   display: flex;
   gap: 0.5rem;
