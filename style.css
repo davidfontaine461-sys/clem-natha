@@ -1766,6 +1766,11 @@ footer ul a:hover {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
+  /* Inline 3-col → 2-col sur tablette */
+  div[style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1848,6 +1853,22 @@ footer ul a:hover {
 
   .styles-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Inline grids → 1 colonne sur mobile */
+  div[style*="grid-template-columns: repeat(2, 1fr)"],
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns: repeat(3, 1fr)"],
+  div[style*="grid-template-columns: repeat(12, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Réduction du gap pour les études de cas empilées */
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    gap: 2rem !important;
+  }
+  /* Enfants de la grille atelier (about.html) → pleine largeur */
+  div[style*="grid-template-columns: repeat(12, 1fr)"] > div[style*="grid-column"] {
+    grid-column: auto !important;
   }
 }
 
