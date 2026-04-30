@@ -349,6 +349,13 @@ section {
   background: var(--paper-deep);
 }
 
+@media (min-width: 1025px) {
+  .hero {
+    height: 700px;
+    min-height: unset;
+  }
+}
+
 .hero-image {
   position: absolute;
   inset: 0;
