@@ -458,6 +458,16 @@ section {
   margin: 0 auto;
 }
 
+/* Override desktop — doit venir APRÈS la règle de base pour gagner la cascade */
+@media (min-width: 1025px) {
+  .hero-content {
+    justify-content: center;
+    padding-top: 6rem;
+    margin: 0;
+    max-width: none;
+  }
+}
+
 .hero-eyebrow {
   font-size: 0.75rem;
   letter-spacing: 0.3em;
