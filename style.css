@@ -381,46 +381,29 @@ section {
   background: linear-gradient(180deg, rgba(15,14,12,0.3) 0%, rgba(15,14,12,0.5) 70%, rgba(15,14,12,0.85) 100%);
 }
 
-/* Desktop : deux colonnes verticales — doit être APRÈS les règles de base */
+/* Desktop : image plein fond, texte à gauche avec dégradé directionnel */
 @media (min-width: 1025px) {
-  .hero {
-    display: grid;
-    grid-template-columns: 560px 1fr;
-  }
-
-  /* Colonne droite : image */
   .hero-image {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    grid-column: 2;
-    grid-row: 1;
+    position: absolute;
+    inset: 0;
   }
 
   .hero-image::after {
-    display: none;
+    display: block;
+    background: linear-gradient(to right, rgba(15,14,12,0.88) 0%, rgba(15,14,12,0.6) 45%, rgba(15,14,12,0.15) 75%, rgba(15,14,12,0.05) 100%);
   }
 
-  /* inset: top right bottom left — 2rem du bord droit de l'écran */
   .hero-img {
     position: absolute;
-    inset: 0 2rem 0 0;
-    width: auto;
+    inset: 0;
+    width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0;
   }
 
-  /* Colonne gauche : texte */
   .hero-content {
-    height: 100%;
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .scroll-indicator {
-    display: none;
+    max-width: 680px;
   }
 }
 
