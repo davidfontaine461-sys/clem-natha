@@ -421,9 +421,9 @@ section {
   .hero-img {
     position: relative;
     inset: auto;
-    width: 100%;
+    width: 78%;
     height: auto;
-    max-height: calc(100vh - 6rem);
+    max-height: calc(100vh - 8rem);
     aspect-ratio: 3/4;
     object-fit: cover;
     border-radius: 16px;
