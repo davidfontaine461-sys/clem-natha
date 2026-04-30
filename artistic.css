@@ -1,0 +1,84 @@
+/* ========================================
+   CLEM&NATHA — Artistic Accents
+   Sumi-e · Calligraphie · Geste muraliste
+   ======================================== */
+
+/* --- Animation principale : tracé de pinceau --- */
+@keyframes paint-in {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* --- État initial : paths invisibles en attente --- */
+.brush-stroke path,
+.calligraphy-line path,
+.ink-splash path,
+.drip path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+/* --- Déclenchement au scroll (.painted ajouté par IntersectionObserver) --- */
+.brush-stroke.painted path,
+.calligraphy-line.painted path,
+.ink-splash.painted path,
+.drip.painted path {
+  animation: paint-in 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* --- Décalages pour groupes de traits multiples --- */
+.brush-stroke.painted path:nth-child(2),
+.ink-splash.painted path:nth-child(2) { animation-delay: 0.18s; }
+.brush-stroke.painted path:nth-child(3),
+.ink-splash.painted path:nth-child(3) { animation-delay: 0.36s; }
+
+/* --- Chargement immédiat (hero, visible dès l'arrivée) --- */
+.paint-immediate path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: paint-in 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.5s;
+}
+
+/* --- Propriétés communes à tous les accents artistiques --- */
+.brush-stroke,
+.calligraphy-line,
+.ink-splash,
+.drip {
+  pointer-events: none;
+  user-select: none;
+  overflow: visible;
+}
+
+/* --- Trait vertical hero : masqué sur mobile pour ne pas couvrir le texte --- */
+.hero-brush {
+  display: none;
+}
+@media (min-width: 900px) {
+  .hero-brush {
+    display: block;
+  }
+}
+
+/* --- Process steps : position relative pour l'enso en fond --- */
+.process-step {
+  position: relative;
+}
+
+/* --- CTA final : position pour les éclaboussures aux coins --- */
+.cta-final {
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Respect du mode "préfère sans animation" --- */
+@media (prefers-reduced-motion: reduce) {
+  .brush-stroke path,
+  .calligraphy-line path,
+  .ink-splash path,
+  .drip path,
+  .paint-immediate path {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}

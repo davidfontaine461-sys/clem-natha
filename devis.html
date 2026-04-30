@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demander un devis — Clem&Natha | Fresque murale La Réunion</title>
+  <meta name="description" content="Demandez votre devis personnalisé pour une fresque murale à La Réunion. Réponse sous 48h. Gratuit, sans engagement. Particuliers et professionnels.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Clem<span>&</span>Natha</a>
+  <button class="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-menu">
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="pros.html">Pour les pros</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">Notre duo</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="devis.html" class="nav-cta">Devis</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero" style="height: 50vh; min-height: 400px;">
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> / Devis</div>
+    <h1>Votre projet,<br><em>notre attention</em></h1>
+  </div>
+</section>
+
+<section style="background: var(--paper); padding-top: 6rem;">
+  <div class="container">
+    <div class="form-section">
+
+      <aside class="form-aside reveal">
+        <span class="eyebrow">Demande de devis</span>
+        <h2 style="margin-top: 1rem;">Quelques <em>informations</em>,<br>une réponse rapide</h2>
+        <p>Remplissez ce formulaire avec le maximum de détails. Plus votre brief est précis, plus notre réponse sera pertinente.</p>
+
+        <ul class="reassurance">
+          <li>Réponse sous 48h ouvrées</li>
+          <li>Devis personnalisé et gratuit</li>
+          <li>Sans engagement</li>
+          <li>Paiement en 2 ou 3 fois possible</li>
+          <li>Intervention sur toute l'île</li>
+        </ul>
+
+        <p style="margin-top: 2rem; font-size: 0.95rem;">Une question avant de remplir le formulaire ?<br>
+          <a href="tel:0693990462" style="color: var(--vermillon); border-bottom: 1px solid var(--vermillon); padding-bottom: 2px;">06 93 99 04 62</a>
+        </p>
+      </aside>
+
+      <form class="form-card reveal reveal-delay-1">
+
+        <div class="form-row">
+          <label>Type de projet <span class="required">*</span></label>
+          <div class="radio-group">
+            <div class="radio-pill active">Particulier</div>
+            <div class="radio-pill">Professionnel</div>
+          </div>
+        </div>
+
+        <div class="form-row split">
+          <div>
+            <label for="nom">Nom complet <span class="required">*</span></label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+          <div>
+            <label for="entreprise">Entreprise (si pro)</label>
+            <input type="text" id="entreprise" name="entreprise">
+          </div>
+        </div>
+
+        <div class="form-row split">
+          <div>
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="tel">Téléphone <span class="required">*</span></label>
+            <input type="tel" id="tel" name="tel" required>
+          </div>
+        </div>
+
+        <div class="form-row split">
+          <div>
+            <label for="commune">Commune <span class="required">*</span></label>
+            <select id="commune" name="commune" required>
+              <option value="">Sélectionner</option>
+              <option>Saint-Denis</option>
+              <option>Saint-Paul</option>
+              <option>Saint-Pierre</option>
+              <option>Le Tampon</option>
+              <option>Saint-André</option>
+              <option>Saint-Louis</option>
+              <option>Le Port</option>
+              <option>Saint-Benoît</option>
+              <option>Saint-Joseph</option>
+              <option>Saint-Leu</option>
+              <option>Sainte-Marie</option>
+              <option>Sainte-Suzanne</option>
+              <option>La Possession</option>
+              <option>Bras-Panon</option>
+              <option>L'Étang-Salé</option>
+              <option>Petite-Île</option>
+              <option>Saint-Philippe</option>
+              <option>Sainte-Rose</option>
+              <option>Cilaos</option>
+              <option>Salazie</option>
+              <option>Entre-Deux</option>
+              <option>Trois-Bassins</option>
+              <option>Les Avirons</option>
+              <option>La Plaine-des-Palmistes</option>
+            </select>
+          </div>
+          <div>
+            <label for="dimensions">Dimensions du mur</label>
+            <input type="text" id="dimensions" name="dimensions" placeholder="ex : 4 m × 2,5 m">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>Style souhaité</label>
+          <div class="styles-pick">
+            <div class="style-pick">
+              <div class="photo-placeholder">
+                <div class="ph-num">M</div>
+              </div>
+              <span>Manga</span>
+            </div>
+            <div class="style-pick">
+              <div class="photo-placeholder dark">
+                <div class="ph-num">R</div>
+              </div>
+              <span>Réaliste</span>
+            </div>
+            <div class="style-pick">
+              <div class="photo-placeholder">
+                <div class="ph-num">T</div>
+              </div>
+              <span>Tropical</span>
+            </div>
+            <div class="style-pick">
+              <div class="photo-placeholder dark">
+                <div class="ph-num">B</div>
+              </div>
+              <span>N&B</span>
+            </div>
+            <div class="style-pick">
+              <div class="photo-placeholder">
+                <div class="ph-num">P</div>
+              </div>
+              <span>Paysage</span>
+            </div>
+            <div class="style-pick">
+              <div class="photo-placeholder dark">
+                <div class="ph-num">I</div>
+              </div>
+              <span>Illustration</span>
+            </div>
+            <div class="style-pick">
+              <div class="photo-placeholder">
+                <div class="ph-num">A</div>
+              </div>
+              <span>Aquarelle</span>
+            </div>
+            <div class="style-pick">
+              <div class="photo-placeholder dark">
+                <div class="ph-num">?</div>
+              </div>
+              <span>Conseillez-moi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>Photo(s) du mur <span class="required">*</span></label>
+          <div class="upload-zone">
+            <div class="upload-icon">+</div>
+            <p>Cliquez ou déposez vos photos ici</p>
+            <span>JPG, PNG — plusieurs fichiers possibles</span>
+            <input type="file" name="photos-mur" accept="image/*" multiple style="display: none;">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>Images d'inspiration (optionnel)</label>
+          <div class="upload-zone">
+            <div class="upload-icon">+</div>
+            <p>Vos références visuelles</p>
+            <span>Optionnel — JPG, PNG</span>
+            <input type="file" name="photos-inspi" accept="image/*" multiple style="display: none;">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="delai">Délai souhaité</label>
+          <select id="delai" name="delai">
+            <option value="">Sélectionner</option>
+            <option>Dans le mois</option>
+            <option>Dans les 3 mois</option>
+            <option>Dans les 6 mois</option>
+            <option>Pas de délai précis</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Décrivez votre projet</label>
+          <textarea id="message" name="message" placeholder="Le contexte, votre idée, vos contraintes, vos envies..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">
+          Envoyer ma demande <span class="arrow">→</span>
+        </button>
+
+        <p style="font-size: 0.8rem; color: var(--stone); margin-top: 1.5rem; text-align: center;">
+          Vos informations sont strictement confidentielles et utilisées uniquement pour vous répondre.
+        </p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Clem<em>&</em>Natha</div>
+        <p>Duo d'artistes muralistes basés à La Rivière Saint-Louis, intervenant sur toute l'île de La Réunion.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pros.html">Pour les pros</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">Notre duo</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:0693990462">06 93 99 04 62</a></li>
+          <li><a href="mailto:clem.natha974@gmail.com">clem.natha974@gmail.com</a></li>
+          <li>La Rivière Saint-Louis</li>
+          <li>Île de La Réunion</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Réseaux</h5>
+        <ul>
+          <li><a href="https://www.instagram.com/clem.natha/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/clemetnatha/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Clem&Natha. Tous droits réservés.</span>
+      <span>Site conçu avec soin · La Réunion 974</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
