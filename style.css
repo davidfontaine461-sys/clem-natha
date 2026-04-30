@@ -627,8 +627,6 @@ section {
 .stats {
   background: var(--paper-warm);
   padding: var(--space-lg) 0;
-  border-top: 1px solid rgba(15, 14, 12, 0.08);
-  border-bottom: 1px solid rgba(15, 14, 12, 0.08);
 }
 
 .stats-grid {
