@@ -716,10 +716,10 @@ section {
    ======================================== */
 
 .stats {
-  background: #2a2622;
+  background: var(--paper-warm);
   padding: 3rem 0;
-  border-top: 1px solid rgba(245, 241, 234, 0.1);
-  border-bottom: 1px solid rgba(245, 241, 234, 0.1);
+  border-top: 1px solid rgba(15, 14, 12, 0.08);
+  border-bottom: 1px solid rgba(15, 14, 12, 0.08);
 }
 
 .stats-grid {
@@ -741,7 +741,7 @@ section {
   top: 20%;
   bottom: 20%;
   width: 1px;
-  background: rgba(245, 241, 234, 0.15);
+  background: rgba(15, 14, 12, 0.1);
 }
 
 .stat-num {
@@ -749,7 +749,7 @@ section {
   font-size: clamp(2.5rem, 4.5vw, 3.8rem);
   font-weight: 300;
   font-variation-settings: "opsz" 144;
-  color: var(--paper);
+  color: var(--ink);
   line-height: 1;
   margin-bottom: 0.6rem;
   letter-spacing: -0.03em;
@@ -764,7 +764,7 @@ section {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--stone-light);
+  color: var(--stone);
 }
 
 /* ========================================
@@ -2020,10 +2020,10 @@ footer ul a:hover {
    ======================================== */
 
 .trust-bar {
-  background: #2a2622;
+  background: var(--paper-warm);
   padding: 4rem 0 4.5rem;
-  border-top: 1px solid rgba(245, 241, 234, 0.1);
-  border-bottom: 1px solid rgba(245, 241, 234, 0.1);
+  border-top: 1px solid rgba(15, 14, 12, 0.08);
+  border-bottom: 1px solid rgba(15, 14, 12, 0.08);
   overflow: hidden;
   position: relative;
 }
@@ -2033,7 +2033,7 @@ footer ul a:hover {
   font-size: 0.75rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--stone-light);
+  color: var(--stone);
   margin-bottom: 2.5rem;
   display: flex;
   align-items: center;
@@ -2084,7 +2084,7 @@ footer ul a:hover {
   font-style: italic;
   font-weight: 400;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
-  color: var(--paper);
+  color: var(--ink);
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -2106,7 +2106,7 @@ footer ul a:hover {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--stone-light);
+  color: var(--stone);
   margin-left: 0.6rem;
   font-weight: 500;
 }
@@ -2163,5 +2163,48 @@ footer ul a:hover {
     grid-column: span 1 !important;
     max-width: 100% !important;
     margin: 0 !important;
+  }
+}
+
+@media (max-width: 700px) {
+  section > div[style*="border-radius: 50%"] {
+    width: 200px !important;
+    height: 200px !important;
+    filter: blur(40px) !important;
+  }
+}
+
+@media (max-width: 700px) {
+
+  /* Overlay sombre renforcé sur l'image hero */
+  .hero-image::after {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 14, 12, 0.55) 0%,
+      rgba(15, 14, 12, 0.7) 50%,
+      rgba(15, 14, 12, 0.92) 100%
+    ) !important;
+  }
+
+  /* Ombre portée discrète sur tous les textes du hero */
+  .hero h1,
+  .hero-sub,
+  .hero-eyebrow,
+  .hero-audience-item {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Badge audience particuliers/pros : fond plus opaque */
+  .hero-audience {
+    background: rgba(15, 14, 12, 0.45) !important;
+    border-color: rgba(245, 241, 234, 0.3) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  /* Sous-titre : couleur légèrement renforcée */
+  .hero-sub {
+    color: var(--paper) !important;
+    opacity: 0.95;
   }
 }
