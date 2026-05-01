@@ -43,7 +43,6 @@
   </script>
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="artistic.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -89,16 +88,6 @@
       <a href="#oeuvres-recentes" class="btn btn-light">Voir nos œuvres</a>
     </div>
   </div>
-
-  <!-- Accent artistique : trait de pinceau vertical sumi-e -->
-  <svg class="brush-stroke paint-immediate hero-brush"
-       aria-hidden="true" focusable="false"
-       style="position:absolute; right:7%; top:14%; width:22px; height:62%; z-index:2; color:var(--vermillon); opacity:0.38;"
-       viewBox="0 0 40 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path pathLength="1"
-          d="M20 5 C17 22 22 44 18 70 C15 94 20 118 16 146 C13 170 18 195 15 220 C12 242 17 264 14 283 C12 298 16 312 18 317"
-          stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
 
   <div class="scroll-indicator"></div>
 </section>
@@ -262,22 +251,6 @@
 <section class="cta-final" style="background: var(--paper-deep); position: relative; overflow: hidden;">
   <div style="position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; border-radius: 50%; background: var(--vermillon); opacity: 0.18; filter: blur(100px); pointer-events: none;"></div>
   <div style="position: absolute; bottom: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: var(--vermillon); opacity: 0.12; filter: blur(90px); pointer-events: none;"></div>
-  <!-- Éclaboussures vermillon : coin haut-gauche -->
-  <svg class="ink-splash reveal-paint" aria-hidden="true"
-       style="position:absolute;top:1.2rem;left:1.5rem;width:58px;height:58px;color:var(--vermillon);opacity:0.22;z-index:0;"
-       viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path pathLength="1" d="M16 29 Q8 22 6 13"  stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
-    <path pathLength="1" d="M29 14 Q26 6 23 3"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-    <path pathLength="1" d="M42 21 Q48 14 50 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-  </svg>
-  <!-- Éclaboussures vermillon : coin bas-droit -->
-  <svg class="ink-splash reveal-paint" aria-hidden="true"
-       style="position:absolute;bottom:1.2rem;right:1.5rem;width:58px;height:58px;color:var(--vermillon);opacity:0.22;z-index:0;transform:rotate(180deg);"
-       viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path pathLength="1" d="M16 29 Q8 22 6 13"  stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
-    <path pathLength="1" d="M29 14 Q26 6 23 3"  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-    <path pathLength="1" d="M42 21 Q48 14 50 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-  </svg>
   <div class="container-narrow">
     <span class="eyebrow reveal" style="color: var(--stone-light);">Votre projet</span>
     <h2 class="reveal reveal-delay-1" style="color: var(--paper);">Prêt à donner <em>vie</em><br>à vos murs ?</h2>

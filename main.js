@@ -53,24 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => el.classList.add('in-view'));
   }
 
-  // Reveal paint — SVG brush strokes au scroll
-  const paintEls = document.querySelectorAll('.reveal-paint');
-  if (paintEls.length) {
-    if ('IntersectionObserver' in window) {
-      const paintObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('painted');
-            paintObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.3, rootMargin: '0px 0px -40px 0px' });
-      paintEls.forEach(el => paintObserver.observe(el));
-    } else {
-      paintEls.forEach(el => el.classList.add('painted'));
-    }
-  }
-
   // Filtres galerie
   const filterBtns = document.querySelectorAll('.filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
