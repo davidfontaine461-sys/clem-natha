@@ -100,11 +100,6 @@
           stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 
-  <div class="hero-meta">
-    <span class="num">974</span>
-    Toute l'île
-  </div>
-
   <div class="scroll-indicator"></div>
 </section>
 
@@ -132,98 +127,103 @@
   </div>
 </section>
 
-<!-- Section Pros -->
-<section class="pro-block">
-  <div class="container">
-    <div class="pro-grid">
-      <div class="pro-text reveal">
-        <span class="eyebrow">Pour les professionnels</span>
-        <h2>Transformez vos murs en <em>avantage concurrentiel</em></h2>
-        <p>Restaurateurs, hôteliers, commerçants — une fresque sur mesure crée une identité visuelle forte, un spot photogénique pour vos clients, et une signature qui se partage sur les réseaux. Bien plus qu'une décoration, un investissement marketing.</p>
-
-        <ul class="pro-benefits">
-          <li><span class="num">I.</span> Différenciation immédiate de votre établissement</li>
-          <li><span class="num">II.</span> Identité visuelle cohérente avec votre marque</li>
-          <li><span class="num">III.</span> Contenu social organique généré par vos clients</li>
-          <li><span class="num">IV.</span> Expérience client mémorable et photogénique</li>
-        </ul>
-
-        <a href="pros.html" class="btn btn-primary">Découvrir l'offre pro <span class="arrow">→</span></a>
-      </div>
-
-      <div class="pro-image-stack reveal reveal-delay-2">
-        <div class="photo-placeholder ph-1">
-          <img src="pro-01.webp" alt="Fresque murale sur mesure pour un établissement professionnel — Clem&Natha La Réunion" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
-        <div class="photo-placeholder ph-2 dark" style="overflow:hidden;">
-          <img src="pro-02.webp" alt="Fresque professionnelle Clem&Natha La Reunion" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
-    </div>
-  </div>
-</section>
 
 <!-- Galerie -->
-<section class="gallery" id="oeuvres-recentes">
+<section class="gallery" id="oeuvres-recentes" style="background: var(--paper-deep); position: relative; overflow: hidden;">
+  <div style="position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; border-radius: 50%; background: var(--vermillon); opacity: 0.22; filter: blur(80px); pointer-events: none;"></div>
+  <div style="position: absolute; bottom: -150px; left: -100px; width: 500px; height: 500px; border-radius: 50%; background: var(--vermillon); opacity: 0.18; filter: blur(70px); pointer-events: none;"></div>
   <div class="container">
     <div class="section-header reveal">
       <div>
-        <span class="eyebrow">Portfolio sélection</span>
-        <h2>Œuvres récentes</h2>
+        <span class="eyebrow" style="color: var(--stone-light);">Portfolio sélection</span>
+        <h2 style="color: var(--paper);">Œuvres récentes</h2>
       </div>
     </div>
 
-    <div class="gallery-grid reveal">
-      <a href="portfolio.html" class="gallery-item size-lg" data-tags="realiste,exterieur">
-        <img src="portfolio-04.webp" alt="Fresque realiste exterieure — Saint-Pierre" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div class="gallery-grid reveal" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start;">
+
+      <a href="portfolio.html" class="gallery-item" data-tags="realiste,exterieur"
+         style="aspect-ratio: 4/5; transform: rotate(-0.6deg);
+                box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: transform 0.6s cubic-bezier(0.65,0,0.35,1), box-shadow 0.6s ease;">
+        <div class="photo-placeholder">
+          <div class="ph-num">04</div>
+          <div class="ph-name">images/portfolio-04.jpeg</div>
+        </div>
         <div class="item-info">
           <h4>Fresque réaliste extérieure</h4>
           <span>Saint-Pierre · Particulier</span>
         </div>
       </a>
 
-      <a href="portfolio.html" class="gallery-item size-md" data-tags="manga,interieur">
-        <img src="portfolio-05.webp" alt="Chambre manga — Saint-Denis" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <a href="portfolio.html" class="gallery-item" data-tags="manga,interieur"
+         style="aspect-ratio: 4/5; transform: rotate(0.5deg); margin-top: 4rem;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: transform 0.6s cubic-bezier(0.65,0,0.35,1), box-shadow 0.6s ease;">
+        <div class="photo-placeholder dark">
+          <div class="ph-num">05</div>
+          <div class="ph-name">images/portfolio-05.jpeg</div>
+        </div>
         <div class="item-info">
           <h4>Chambre manga</h4>
           <span>Saint-Denis · Particulier</span>
         </div>
       </a>
 
-      <a href="portfolio.html" class="gallery-item size-tall" data-tags="tropical,exterieur">
-        <img src="portfolio-06.webp" alt="Bord de piscine tropical — Saint-Gilles" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <a href="portfolio.html" class="gallery-item" data-tags="tropical,exterieur"
+         style="aspect-ratio: 16/9; transform: rotate(-0.4deg); grid-column: span 2; max-width: 100%; margin: 2rem 0;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: transform 0.6s cubic-bezier(0.65,0,0.35,1), box-shadow 0.6s ease;">
+        <div class="photo-placeholder">
+          <div class="ph-num">06</div>
+          <div class="ph-name">images/portfolio-06.jpeg</div>
+        </div>
         <div class="item-info">
           <h4>Bord de piscine tropical</h4>
           <span>Saint-Gilles · Particulier</span>
         </div>
       </a>
 
-      <a href="portfolio.html" class="gallery-item size-md" data-tags="bw,interieur">
-        <img src="portfolio-07.webp" alt="Fresque B&W salon — Le Tampon" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <a href="portfolio.html" class="gallery-item" data-tags="bw,interieur"
+         style="aspect-ratio: 4/5; transform: rotate(0.7deg); margin-top: 3rem;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: transform 0.6s cubic-bezier(0.65,0,0.35,1), box-shadow 0.6s ease;">
+        <div class="photo-placeholder dark">
+          <div class="ph-num">07</div>
+          <div class="ph-name">images/portfolio-07.jpeg</div>
+        </div>
         <div class="item-info">
           <h4>Fresque B&W salon</h4>
           <span>Le Tampon · Particulier</span>
         </div>
       </a>
 
-      <a href="portfolio.html" class="gallery-item size-md" data-tags="realiste,exterieur">
-        <img src="portfolio-08.webp" alt="Devanture commerce — Saint-Paul" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <a href="portfolio.html" class="gallery-item" data-tags="realiste,exterieur"
+         style="aspect-ratio: 4/5; transform: rotate(-0.5deg);
+                box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: transform 0.6s cubic-bezier(0.65,0,0.35,1), box-shadow 0.6s ease;">
+        <div class="photo-placeholder">
+          <div class="ph-num">08</div>
+          <div class="ph-name">images/portfolio-08.jpeg</div>
+        </div>
         <div class="item-info">
           <h4>Devanture commerce</h4>
           <span>Saint-Paul · Pro</span>
         </div>
       </a>
 
-      <a href="portfolio.html" class="gallery-item size-wide" data-tags="tropical,exterieur">
-        <img src="portfolio-09.webp" alt="Fresque restaurant XXL — Saint-Leu" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <a href="portfolio.html" class="gallery-item" data-tags="tropical,exterieur"
+         style="aspect-ratio: 16/10; grid-column: span 2; transform: rotate(0.3deg); margin-top: 2rem;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: transform 0.6s cubic-bezier(0.65,0,0.35,1), box-shadow 0.6s ease;">
+        <div class="photo-placeholder dark">
+          <div class="ph-num">09</div>
+          <div class="ph-name">images/portfolio-09.jpeg</div>
+        </div>
         <div class="item-info">
           <h4>Fresque restaurant XXL</h4>
           <span>Saint-Leu · Pro</span>
         </div>
       </a>
+
     </div>
 
     <div style="text-align: center; margin-top: 4rem;">
-      <a href="portfolio.html" class="btn btn-secondary">Voir tout le portfolio <span class="arrow">→</span></a>
+      <a href="portfolio.html" class="btn btn-light">Voir tout le portfolio <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -241,6 +241,7 @@
       <span class="trust-item">Au Petit Plaisir<span class="location">Saint-Louis</span></span>
       <span class="trust-item">CHU de La Réunion<span class="location">Saint-Pierre &middot; Saint-Denis</span></span>
       <span class="trust-item">Cabinet Kiné Chanon<span class="location">Saint-Louis</span></span>
+      <span class="trust-item">Island Nutrition<span class="location">La Possession</span></span>
       <span class="trust-item">The Kazz To Be<span class="location">Étang-Salé</span></span>
       <!-- Second set (duplication pour défilement infini) -->
       <span class="trust-item">Restaurant Ô Saigon<span class="location">Saint-Gilles</span></span>
@@ -250,60 +251,17 @@
       <span class="trust-item">Au Petit Plaisir<span class="location">Saint-Louis</span></span>
       <span class="trust-item">CHU de La Réunion<span class="location">Saint-Pierre &middot; Saint-Denis</span></span>
       <span class="trust-item">Cabinet Kiné Chanon<span class="location">Saint-Louis</span></span>
+      <span class="trust-item">Island Nutrition<span class="location">La Possession</span></span>
       <span class="trust-item">The Kazz To Be<span class="location">Étang-Salé</span></span>
     </div>
   </div>
 </section>
 
-<!-- Services aperçu -->
-<section style="background: var(--paper-warm);">
-  <div class="container">
-    <div class="section-header reveal">
-      <div>
-        <span class="eyebrow">Ce que nous faisons</span>
-        <h2>Nos <em>prestations</em></h2>
-      </div>
-      <p>Du salon familial à la façade d'hôtel — nos prestations couvrent tous vos espaces, tous vos projets.</p>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem;">
-      <a href="services.html" class="reveal" style="display:block; padding:2.5rem; background:var(--paper); text-decoration:none; color:var(--ink);">
-        <span class="eyebrow">01</span>
-        <h3 style="margin: 1rem 0 0.75rem; font-size: 1.25rem;">Fresque chez les particuliers</h3>
-        <p style="color: var(--ink-soft); line-height: 1.65; margin-bottom: 1.5rem;">Intérieur ou extérieur — chambre d'enfant, salon, mur de jardin, façade. Tous styles, toutes surfaces.</p>
-        <span style="color: var(--vermillon); font-family: var(--font-body); font-size: 0.9rem; letter-spacing: 0.05em;">Voir →</span>
-      </a>
-
-      <a href="services.html" class="reveal reveal-delay-1" style="display:block; padding:2.5rem; background:var(--paper); text-decoration:none; color:var(--ink);">
-        <span class="eyebrow">02</span>
-        <h3 style="margin: 1rem 0 0.75rem; font-size: 1.25rem;">Devanture commerciale</h3>
-        <p style="color: var(--ink-soft); line-height: 1.65; margin-bottom: 1.5rem;">Boutiques, restaurants, salons — une façade qui se différencie et génère du contenu social pour vos clients.</p>
-        <span style="color: var(--vermillon); font-family: var(--font-body); font-size: 0.9rem; letter-spacing: 0.05em;">Voir →</span>
-      </a>
-
-      <a href="services.html" class="reveal reveal-delay-2" style="display:block; padding:2.5rem; background:var(--paper); text-decoration:none; color:var(--ink);">
-        <span class="eyebrow">03</span>
-        <h3 style="margin: 1rem 0 0.75rem; font-size: 1.25rem;">Espaces hôteliers & touristiques</h3>
-        <p style="color: var(--ink-soft); line-height: 1.65; margin-bottom: 1.5rem;">Halls, chambres signatures, espaces piscine — une identité visuelle forte et photogénique pour votre établissement.</p>
-        <span style="color: var(--vermillon); font-family: var(--font-body); font-size: 0.9rem; letter-spacing: 0.05em;">Voir →</span>
-      </a>
-
-      <a href="services.html" class="reveal reveal-delay-3" style="display:block; padding:2.5rem; background:var(--paper); text-decoration:none; color:var(--ink);">
-        <span class="eyebrow">04</span>
-        <h3 style="margin: 1rem 0 0.75rem; font-size: 1.25rem;">Fresque événementielle</h3>
-        <p style="color: var(--ink-soft); line-height: 1.65; margin-bottom: 1.5rem;">Live painting, animations artistiques, décors éphémères pour vos événements d'entreprise et privés.</p>
-        <span style="color: var(--vermillon); font-family: var(--font-body); font-size: 0.9rem; letter-spacing: 0.05em;">Voir →</span>
-      </a>
-    </div>
-
-    <div style="text-align: center; margin-top: 3rem;">
-      <a href="services.html" class="btn btn-secondary">Voir tous nos services <span class="arrow">→</span></a>
-    </div>
-  </div>
-</section>
 
 <!-- CTA Final -->
-<section class="cta-final">
+<section class="cta-final" style="background: var(--paper-deep); position: relative; overflow: hidden;">
+  <div style="position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; border-radius: 50%; background: var(--vermillon); opacity: 0.18; filter: blur(100px); pointer-events: none;"></div>
+  <div style="position: absolute; bottom: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: var(--vermillon); opacity: 0.12; filter: blur(90px); pointer-events: none;"></div>
   <!-- Éclaboussures vermillon : coin haut-gauche -->
   <svg class="ink-splash reveal-paint" aria-hidden="true"
        style="position:absolute;top:1.2rem;left:1.5rem;width:58px;height:58px;color:var(--vermillon);opacity:0.22;z-index:0;"
@@ -321,9 +279,9 @@
     <path pathLength="1" d="M42 21 Q48 14 50 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
   </svg>
   <div class="container-narrow">
-    <span class="eyebrow reveal">Votre projet</span>
-    <h2 class="reveal reveal-delay-1">Prêt à donner <em>vie</em><br>à vos murs ?</h2>
-    <p class="reveal reveal-delay-2">Envoyez-nous une photo de votre mur, ses dimensions, et votre idée. Nous vous répondons sous 48h avec une proposition personnalisée.</p>
+    <span class="eyebrow reveal" style="color: var(--stone-light);">Votre projet</span>
+    <h2 class="reveal reveal-delay-1" style="color: var(--paper);">Prêt à donner <em>vie</em><br>à vos murs ?</h2>
+    <p class="reveal reveal-delay-2" style="color: var(--stone-light);">Envoyez-nous une photo de votre mur, ses dimensions, et votre idée. Nous vous répondons sous 48h avec une proposition personnalisée.</p>
     <div class="reveal reveal-delay-3">
       <a href="devis.html" class="btn btn-primary">Demander mon devis <span class="arrow">→</span></a>
     </div>
