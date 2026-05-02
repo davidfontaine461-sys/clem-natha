@@ -2175,6 +2175,12 @@ footer ul a:hover {
 }
 
 @media (max-width: 700px) {
+  h1, h2, h3, h4 {
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 700px) {
 
   /* Overlay sombre renforcé sur l'image hero */
   .hero-image::after {
