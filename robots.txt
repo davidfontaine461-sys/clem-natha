@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /backup-html-2026-04-29/
+Disallow: /backup-2026-04-30/
+Disallow: /backup-2026-05-01/
+Disallow: /backup-2026-05-01-callig/
+Disallow: /backup-2026-05-02/
+Disallow: /backup-artistic-2026-04-29/
+
+Sitemap: https://clemandnatha.re/sitemap.xml

@@ -100,8 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const stylePicks = document.querySelectorAll('.style-pick');
   stylePicks.forEach(pick => {
     pick.addEventListener('click', () => {
-      stylePicks.forEach(p => p.classList.remove('active'));
-      pick.classList.add('active');
+      const isActive = pick.classList.contains('active');
+      pick.classList.toggle('active');
+      pick.setAttribute('aria-checked', (!isActive).toString());
+    });
+    pick.addEventListener('keydown', e => {
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); pick.click(); }
     });
   });
 
@@ -111,8 +115,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const pills = group.querySelectorAll('.radio-pill');
     pills.forEach(pill => {
       pill.addEventListener('click', () => {
-        pills.forEach(p => p.classList.remove('active'));
+        pills.forEach(p => { p.classList.remove('active'); p.setAttribute('aria-checked', 'false'); });
         pill.classList.add('active');
+        pill.setAttribute('aria-checked', 'true');
+      });
+      pill.addEventListener('keydown', e => {
+        if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); pill.click(); }
       });
     });
   });
