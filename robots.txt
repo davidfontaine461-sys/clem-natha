@@ -6,8 +6,8 @@ Disallow: /backup-2026-05-01-callig/
 Disallow: /backup-2026-05-02/
 Disallow: /backup-artistic-2026-04-29/
 
-Sitemap: https://clemandnatha.re/sitemap.xml
+Sitemap: https://clemetnatha.re/sitemap.xml
 
 # IndexNow
 IndexNow-Key: e7dc7082c159d70a2ef28008456bfecf
-IndexNow-Key-Location: https://clemandnatha.re/e7dc7082c159d70a2ef28008456bfecf.txt
+IndexNow-Key-Location: https://clemetnatha.re/e7dc7082c159d70a2ef28008456bfecf.txt
