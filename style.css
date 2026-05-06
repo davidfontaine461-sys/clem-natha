@@ -2146,6 +2146,20 @@ footer ul a:hover {
     -webkit-mask-image: none;
     mask-image: none;
   }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero-eyebrow,
+  .hero h1,
+  .hero-sub,
+  .hero-ctas,
+  .hero-audience {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
 }
 
 .gallery-item:hover {
