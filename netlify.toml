@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+
+# Clean URLs : redirige /page.html -> /page (301)
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+  force = false
