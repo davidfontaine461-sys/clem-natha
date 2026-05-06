@@ -154,12 +154,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Empêcher submit form (maquette)
-  const forms = document.querySelectorAll('form');
-  forms.forEach(form => {
-    form.addEventListener('submit', e => {
+  // Formulaire devis — Web3Forms
+  const devisForm = document.querySelector('form.form-card');
+  if (devisForm) {
+    // Sync radio pills → champ caché type_projet
+    const radioGroup = devisForm.querySelector('.radio-group');
+    if (radioGroup) {
+      radioGroup.querySelectorAll('.radio-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          const hidden = devisForm.querySelector('input[name="type_projet"]');
+          if (hidden) hidden.value = pill.textContent.trim();
+        });
+      });
+    }
+
+    // Sync style-picks → champ caché styles_souhaites
+    const stylePickEls = devisForm.querySelectorAll('.style-pick');
+    const updateStyles = () => {
+      const hidden = devisForm.querySelector('input[name="styles_souhaites"]');
+      if (!hidden) return;
+      const sel = [...stylePickEls]
+        .filter(p => p.classList.contains('active'))
+        .map(p => p.querySelector('span').textContent.trim());
+      hidden.value = sel.length ? sel.join(', ') : 'Non précisé';
+    };
+    stylePickEls.forEach(p => p.addEventListener('click', updateStyles));
+
+    // Soumission AJAX
+    devisForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      alert('Maquette de démonstration. Le formulaire sera connecté lors du déploiement.');
+      updateStyles();
+      const btn = devisForm.querySelector('[type="submit"]');
+      const originalHTML = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = 'Envoi en cours…';
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(devisForm)
+        });
+        const json = await res.json();
+        if (json.success) {
+          devisForm.innerHTML = `
+            <div style="text-align:center;padding:4rem 2rem;">
+              <p style="font-family:var(--font-display);font-style:italic;font-size:2rem;
+                         color:var(--vermillon);margin-bottom:1.5rem;">Merci !</p>
+              <p style="color:var(--ink-soft);line-height:1.8;font-size:1.05rem;">
+                Votre demande a bien été reçue.<br>
+                Nous vous répondons sous <strong>48h</strong>.
+              </p>
+            </div>`;
+        } else {
+          throw new Error(json.message || 'Erreur');
+        }
+      } catch {
+        btn.disabled = false;
+        btn.innerHTML = originalHTML;
+        alert('Une erreur est survenue. Merci de réessayer ou de nous contacter directement.');
+      }
     });
-  });
+  }
 });
