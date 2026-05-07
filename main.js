@@ -190,12 +190,11 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.innerHTML = 'Envoi en cours…';
 
       try {
-        const res = await fetch('https://api.web3forms.com/submit', {
+        const res = await fetch('/', {
           method: 'POST',
           body: new FormData(devisForm)
         });
-        const json = await res.json();
-        if (json.success) {
+        if (res.ok) {
           devisForm.innerHTML = `
             <div style="text-align:center;padding:4rem 2rem;">
               <p style="font-family:var(--font-display);font-style:italic;font-size:2rem;
@@ -206,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </p>
             </div>`;
         } else {
-          throw new Error(json.message || 'Erreur');
+          throw new Error('Erreur ' + res.status);
         }
       } catch {
         btn.disabled = false;

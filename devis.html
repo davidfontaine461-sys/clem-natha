@@ -111,11 +111,8 @@
         </p>
       </aside>
 
-      <form class="form-card reveal reveal-delay-1" enctype="multipart/form-data">
-        <!-- Web3Forms -->
-        <input type="hidden" name="access_key" value="e9edd1f6-9d11-41e8-ab9e-fc808df731fc">
-        <input type="hidden" name="subject" value="Nouvelle demande de devis — Clem&Natha">
-        <input type="hidden" name="from_name" value="Site Clem&Natha">
+      <form class="form-card reveal reveal-delay-1" name="devis" method="POST" netlify netlify-honeypot="botcheck" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="devis">
         <input type="hidden" name="type_projet" value="Particulier">
         <input type="hidden" name="styles_souhaites" value="">
         <input type="checkbox" name="botcheck" style="display:none">
