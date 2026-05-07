@@ -180,38 +180,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     stylePickEls.forEach(p => p.addEventListener('click', updateStyles));
 
-    // Soumission AJAX
-    devisForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    // Synchro champs cachés avant soumission native Netlify
+    devisForm.addEventListener('submit', () => {
       updateStyles();
-      const btn = devisForm.querySelector('[type="submit"]');
-      const originalHTML = btn.innerHTML;
-      btn.disabled = true;
-      btn.innerHTML = 'Envoi en cours…';
-
-      try {
-        const res = await fetch('/', {
-          method: 'POST',
-          body: new FormData(devisForm)
-        });
-        if (res.ok) {
-          devisForm.innerHTML = `
-            <div style="text-align:center;padding:4rem 2rem;">
-              <p style="font-family:var(--font-display);font-style:italic;font-size:2rem;
-                         color:var(--vermillon);margin-bottom:1.5rem;">Merci !</p>
-              <p style="color:var(--ink-soft);line-height:1.8;font-size:1.05rem;">
-                Votre demande a bien été reçue.<br>
-                Nous vous répondons sous <strong>48h</strong>.
-              </p>
-            </div>`;
-        } else {
-          throw new Error('Erreur ' + res.status);
-        }
-      } catch {
-        btn.disabled = false;
-        btn.innerHTML = originalHTML;
-        alert('Une erreur est survenue. Merci de réessayer ou de nous contacter directement.');
-      }
     });
   }
 });
